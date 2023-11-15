@@ -1,0 +1,10 @@
+<mat-toolbar class="mat_toolbar" color="primary">
+  <mat-toolbar-row>
+    <button class="dashboard_btn" routerLink="home" routerLinkActive="active" mat-button color="accent">Home</button>
+    <button class="dashboard_btn"  routerLink="contacts" routerLinkActive="active" mat-button color="accent">Contacts</button>
+    <div *ngIf="regForm" class="user_block">
+      <span>{{regForm.username}}</span>
+      <button class="end_session" (click)="onEndSession()">End Session</button>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

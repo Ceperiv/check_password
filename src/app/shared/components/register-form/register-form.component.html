@@ -1,0 +1,32 @@
+<form [formGroup]="form" class="reg_wrap">
+    <mat-card class="mat_card">
+        <div class="contact_icon"><mat-icon (click)="goToContacts()"> contact_phone</mat-icon></div>
+        <mat-card-title class="card_title">Register Form</mat-card-title>
+        <mat-card-content>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>User name</mat-label>
+                    <input type="text" matInput formControlName="username">
+                    <mat-error>this field is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput formControlName="password" (input)="checkPasswordStrength()">
+                    <mat-error *ngIf="!isRequired">This field is required</mat-error>
+                    <div class="pass_info">
+                        <div class="_info" [style]="{'color' : !hasLetters ? 'grey' : sectionColor}" ><mat-icon class="icon_info" [ngStyle]="{'visibility': !hasLetters ? 'hidden' : 'visible'}">done</mat-icon>Letters</div>
+                        <div class="_info" [style]="{'color' : !hasDigits ? 'grey' : sectionColor}" ><mat-icon class="icon_info" [ngStyle]="{'visibility': !hasDigits ? 'hidden' : 'visible'}">done</mat-icon>Digits</div>
+                        <div class="_info" [style]="{'color' : !hasSymbols ? 'grey' : sectionColor}" ><mat-icon class="icon_info" [ngStyle]="{'visibility': !hasSymbols ? 'hidden' : 'visible'}">done</mat-icon>Symbols</div>
+                    </div>
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+        <mat-card-actions class="actions">
+            <button [disabled]="form.invalid" mat-raised-button color="primary" (click)="register()">Register</button>
+        </mat-card-actions>
+    </mat-card>
+</form>
+
+

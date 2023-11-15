@@ -1,0 +1,32 @@
+.reg_wrap {
+  padding: 20px;
+
+  .mat_card {
+    position: relative;
+    .contact_icon{
+      position: absolute; right: 5px; top:5px;
+    }
+    .contact_icon:hover{
+      cursor: pointer;
+      scale: 1.1;
+      transition: .5s;
+    }
+    .card_title{
+      font-size: small; margin-left: 10px
+    }
+
+    .pass_info {
+      font-size: small;
+
+      ._info {
+        .icon_info {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .actions {
+      min-height: 100px;
+    }
+  }
+}
