@@ -26,5 +26,4 @@ export class HeaderComponent implements OnInit {
         this.regService.setForm(null);
         this.router.navigate(['/register'])
     };
-
 }

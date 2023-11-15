@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
 
 import {MatDialogRef} from "@angular/material/dialog";
-import {Router} from "@angular/router";
 import {RegisterService} from "../../../services";
 
 @Component({
@@ -76,8 +76,8 @@ export class RegisterFormComponent implements OnInit {
         this.router.navigate(['/home'])
     };
 
-    goToContacts():void {
-      this.router.navigate(['/contacts'])
-      this.dialogRef.close()
+    goToContacts(): void {
+        this.router.navigate(['/contacts'])
+        this.dialogRef.close()
     };
 }

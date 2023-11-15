@@ -3,16 +3,25 @@
 
   .mat_card {
     position: relative;
-    .contact_icon{
-      position: absolute; right: 5px; top:5px;
+
+    .contact_icon {
+      position: absolute;
+      right: 5px;
+      top: 5px;
     }
-    .contact_icon:hover{
+
+    .contact_icon:hover {
       cursor: pointer;
       scale: 1.1;
       transition: .5s;
     }
-    .card_title{
-      font-size: small; margin-left: 10px
+
+    .card_title {
+      font-size: small;
+      margin-left: 10px
+    }
+    input{
+      padding: 0 5px;
     }
 
     .pass_info {

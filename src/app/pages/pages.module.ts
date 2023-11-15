@@ -24,5 +24,6 @@ import {InfoComponent} from "./info/info.component";
 
     ]
 })
+
 export class PagesModule {
 }

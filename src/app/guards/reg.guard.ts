@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree} from '@angular/router';
 import {Observable} from 'rxjs';
+
 import {RegisterService} from "../services";
 import {IRegisterForm} from "../interfaces";
 
@@ -9,7 +10,6 @@ import {IRegisterForm} from "../interfaces";
 })
 export class RegGuard implements CanActivate {
     regForm: IRegisterForm | null;
-
 
     constructor(private regService: RegisterService,
                 private router:Router) {
